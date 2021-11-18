@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,10 +19,10 @@ import com.example.demo.service.ProductService;
 public class ProductController {
 	
 	@Autowired
-	ProductService productService;
-	
-	@GetMapping()
-	public ArrayList<Product> getProducts() {
+	private ProductService productService;
+
+	@GetMapping
+	public List<Product> getProducts() {
 		return productService.getProducts();
 	}
 	

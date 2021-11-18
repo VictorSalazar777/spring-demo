@@ -11,7 +11,6 @@ import java.util.Date;
 
 @Entity
 @Table(name="product_price")
-@NamedQuery(name="ProductPrice.findAll", query="SELECT p FROM ProductPrice p")
 public class ProductPrice implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -48,7 +47,7 @@ public class ProductPrice implements Serializable {
 		return product;
 	}
 
-	public void setProduct(Product product) {
+	public void setProduct(@NonNull Product product) {
 		this.product = product;
 	}
 
@@ -56,7 +55,7 @@ public class ProductPrice implements Serializable {
 		return this.price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(@NonNull BigDecimal price) {
 		this.price = price;
 	}
 
@@ -64,7 +63,7 @@ public class ProductPrice implements Serializable {
 		return this.priceDate;
 	}
 
-	public void setPriceDate(Date priceDate) {
+	public void setPriceDate(@NonNull Date priceDate) {
 		this.priceDate = priceDate;
 	}
 
